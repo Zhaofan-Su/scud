@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>飞毛腿｜你的实时跑腿小车</title>
-    <!-- Font Awesome -->
+    <!-- Font Awesome，需换国内cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.css">
     <!-- Bootstrap  -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -47,6 +47,110 @@
         h6 {
             line-height: 1.7;
         }
+        
+        #sigs{
+            background-image: url('./images/sigs.jpg');
+        }
+
+        .timeline {
+        position: relative;
+        list-style: none;
+        padding: 1rem 0;
+        margin: 0;
+      }
+
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        margin-left: -1px;
+        background-color: #50a1ff;
+      }
+
+      .timeline-element {
+        position: relative;
+        width: 50%;
+        padding: 1rem 0;
+        padding-right: 2.5rem;
+        text-align: right;
+      }
+
+      .timeline-element::before {
+        content: '';
+        position: absolute;
+        right: -8px;
+        top: 1.35rem;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid #50a1ff;
+        background-color: #fff;
+      }
+
+      .timeline-element:nth-child(even)::before {
+        right: auto;
+        left: -8px;
+      }
+
+      .timeline-element:nth-child(even) {
+        margin-left: 50%;
+        padding-left: 2.5rem;
+        padding-right: 0;
+        text-align: left;
+      }
+
+      @media (max-width: 767.98px) {
+        .timeline::before {
+          left: 8px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .timeline-element {
+          width: 100%;
+          text-align: left;
+          padding-left: 2.5rem;
+          padding-right: 0;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .timeline-element::before {
+          top: 1.25rem;
+          left: 1px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .timeline-element:nth-child(even) {
+          margin-left: 0rem;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .timeline-element {
+          width: 100%;
+          text-align: left;
+          padding-left: 2.5rem;
+          padding-right: 0;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .timeline-element:nth-child(even)::before {
+          left: 1px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .timeline-element::before {
+          top: 1.25rem;
+        }
+      }
 
     </style>
 </head>
@@ -66,9 +170,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="list-unstyled navbar-nav mr-auto">
-                        <li class="nav-item dropdown ml-4 mb-0">
+                        <!-- <li class="nav-item dropdown ml-4 mb-0">
                             <a class="nav-link dropdown-toggle title" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false"> Homepage </a>
+                               
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="../home/home-parallax.html">Home Parallax</a>
                                 <a class="dropdown-item" href="../home/home-slider.html">Home Slider</a>
@@ -79,8 +184,8 @@
                                 <a class="dropdown-item" href="../home/home-onepage.html">One Page Layout</a>
                                 <a class="dropdown-item" href="../home/coming-soon.html">Coming Soon</a>
                             </div>
-                        </li>
-                        <li class="nav-item dropdown ml-4">
+                        </li> -->
+                        <!-- <li class="nav-item dropdown ml-4">
                             <a class="nav-link dropdown-toggle title" id="navbarDropdownMenuLink12" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Features </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -92,8 +197,8 @@
                         </li>
                         <li class="nav-item ml-4">
                             <a class="nav-link title" href="../pricing/pricing.html" data-offset="90">Pricing</a>
-                        </li>
-                        <li class="nav-item dropdown ml-4">
+                        </li> -->
+                        <!-- <li class="nav-item dropdown ml-4">
                             <a class="nav-link dropdown-toggle title" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Pages </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -115,10 +220,28 @@
                                 <a class="dropdown-item" href="../blog/blog-3columns.html">Blog 3 Columns</a>
                                 <a class="dropdown-item" href="../blog/blog-post.html">Blog Post</a>
                             </div>
-                        </li>
+                        </li> -->
+                        <li class="nav-item ml-4">
+                            <a id="index-link" class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item ml-4" >
+                            <a id="introduce-link" class="nav-link" href="#introduce" >产品介绍</a>
+                          </li>
+                          <li class="nav-item ml-4">
+                            <a id="features-link" class="nav-link" href="#features">产品优势</a>
+                          </li>
+                          <li class="nav-item ml-4">
+                            <a id="sigs-link" class="nav-link" href="#sigs">案例介绍</a>
+                          </li>
+                          <li class="nav-item ml-4">
+                            <a id="future-link" class="nav-link" href="#future">未来发展</a>
+                          </li>
+                          <li class="nav-item ml-4">
+                            <a id="cooperation-link" class="nav-link" href="#cooperation">寻求合作</a>
+                          </li>
                     </ul>
                     <!-- Social Icon  -->
-                    <ul class="navbar-nav nav-flex-icons">
+                    <!-- <ul class="navbar-nav nav-flex-icons">
                         <li class="nav-item">
                             <a class="nav-link">
                                 <i class="fab fa-weibo title"></i>
@@ -137,7 +260,7 @@
                         <li class="nav-item ml-3">
                             <a class="btn pink-gradient btn-rounded btn-sm font-weight-bold" href="#contact" data-offset="90">Free trial</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </nav>
@@ -147,11 +270,12 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-4 offset-lg-1 text-center text-md-left margins">
                         <div class="white-text">
-                            <h1 class="h1-responsive intro-title font-weight-bold mt-sm-5 mt-0 mb-4 wow fadeInLeft" data-wow-delay="0.3s">飞毛腿<br/> 即时达</h1>
+                            <h1 class="h1-responsive intro-title font-weight-bold mt-sm-5 mt-0 mb-4 wow fadeInLeft" data-wow-delay="0.3s">飞毛腿<br> &nbsp; &nbsp; 即时达</h1>
 
-                            <h6 class="wow fadeInLeft" data-wow-delay="0.3s">我们的“飞毛腿”无人小车可以在园区内为您即时配送生活用品、工作文件、食品外卖等物品，为您提供便捷、高效、舒适的园区内生活。
+                            <h6 class="wow fadeInLeft" data-wow-delay="0.3s">我们的飞毛腿无人小车可以在园区内为您即时配送生活用品、工作文件、食品外卖等物品，为您提供便捷、高效、舒适的园区内生活。
                             </h6>
-                            <h6 class="wow fadeInLeft" data-wow-delay="0.3s">还在等什么？快拦下可爱的“飞毛腿”试试吧！
+                            <br>
+                            <h6 class="wow fadeInLeft" data-wow-delay="0.3s">还在等什么？快拦下可爱的飞毛腿试试吧！
                             </h6>
                             <br>
                             <a class="btn btn-white btn-rounded orange-text font-weight-bold ml-lg-0 wow fadeInLeft" data-wow-delay="0.4s">
@@ -162,7 +286,7 @@
                     
                     <!-- 这里可以换我们的小车图片 -->
                     <div class="col-md-12 col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                        <img src="https://mdbootstrap.com/img/Others/cards32.png" alt="" class="img-fluid">
+                        <img src="./images/car.png" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -176,162 +300,279 @@
 
         <div class="container">
 
-            <!-- 项目优势 -->
-            <section id="features" class="section feature-box text-center my-5">
+            <!-- 产品介绍 -->
+            <section id="introduce"  class="section feature-boxmy-5">
 
-                <h2 class="title font-weight-bold my-5 wow fadeIn" data-wow-delay="0.2s">
-                    <strong>我们的优势</strong>
+                <h2 class="title font-weight-bold mt-5 my-5 wow fadeIn text-center " data-wow-delay="0.2s">
+                    <strong>产品介绍</strong>
                 </h2>
 
-                <!-- 板块简介 -->
-                <!-- <p class="grey-text w-responsive mx-auto mb-5 wow fadeIn" data-wow-delay="0.2s">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quas, eos officia maiores ipsam ipsum dolores reiciendis
-                    ad voluptas, animi obcaecati adipisci sapiente mollitia.</p> -->
+                <div class="row mt-3 mb-5 pt-5 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="col-lg-4 col-md-12 mb-5">
+                        <div class="card">
 
-                <div class="row features wow fadeIn" data-wow-delay="0.2s">
+                            <div class="view overlay">
+                                <img class="card-img-top" src="./images/app.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
 
-                    <div class="col-lg-4 text-center">
-                        <div class="icon-area">
-                            <div class="circle-icon">
-                                <i class="fas fa-cogs blue-text"></i>
+                        
+                            <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3 pink-gradient">
+                                <i class="fas fa-qrcode pl-1"></i></a>
+                        
+                            <div class="card-body">
+                                <h4 class="card-title">小程序</h4>
+                                <hr>
+
+                                <p class="card-text">用户通过飞毛腿小程序可以向园区内的飞毛腿无人配送小车下订单。
+                                    <br>
+                                    平台集群组、用户个人为一体，轻便、高效，是园区物资流通的桥梁。
+                                </p>
+                        
                             </div>
-                            <br>
-                            <h5 class="dark-grey-text font-weight-bold mt-2">便捷高效</h5>
-                            <div class="mt-1">
-                                <p class="mx-3 grey-text">我们的“飞毛腿”可以快速地为你送达你想要的物品，免去了您工作时间被占用的烦恼，极大地提高了您在园区内的工作效率。</p>
-                            </div>
+                        
+                            
+                        
                         </div>
                     </div>
 
-                    <div class="col-lg-4 text-center">
-                        <div class="icon-area">
-                            <div class="circle-icon">
-                                <i class="fas fa-user-shield blue-text"></i>
+                    <div class="col-lg-4 col-md-12 mb-5">
+                        <div class="card">
+
+                            <div class="view overlay">
+                                <img class="card-img-top" src="./images/car0.jpeg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
                             </div>
-                            <br>
-                            <h5 class="dark-grey-text font-weight-bold mt-2">安全与隐私</h5>
-                            <div class="mt-1">
-                                <p class="mx-3 grey-text">我们确保您的物品受到妥善的保管，绝不会出现暴力递送的情况。同时我们充分保护您的隐私，安全独立地为每位客户送到物品是我们一直追求的目标。</p>
+
+                        
+                            <div class="card-body">
+                                <h4 class="card-title">无人配送车</h4>
+                                <hr>
+
+                                <p class="card-text">我们的小车专注于园区无人配送，立足解决物品“最后一公里问题”。
+                                    <br>
+                                    我们的可预期安全风险低，保证安全、及时地将物品送到用户的手上。
+                                </p>
+                        
                             </div>
+                        
+                            
+                        
                         </div>
                     </div>
 
-                    <div class="col-lg-4 text-center mb-4">
-                        <div class="icon-area">
-                            <div class="circle-icon">
-                                <i class="fas fa-hand-holding-usd blue-text"></i>
+                    <div class="col-lg-4 col-md-12 mb-5">
+                        <div class="card">
+
+                            <div class="view overlay">
+                                <img class="card-img-top" src="./images/web-admin.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
                             </div>
-                            <br>
-                            <h5 class="dark-grey-text font-weight-bold mt-2">快速盈利</h5>
-                            <div class="mt-1">
-                                <p class="mx-3 grey-text">我们的无人车配送系统不但可以提高您的园区的工作效率、提高园区内人员的生活幸福感，通过合理的配送费能够实现快速回本盈利。</p>
+
+                        
+                            <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3 pink-gradient">
+                                <i class="fas fa-arrow-right pl-1"></i></a>
+                        
+                            <div class="card-body">
+                                <h4 class="card-title">管理平台</h4>
+                                <hr>
+
+                                <p class="card-text">园区管理人员可以通过数据管理平台实时监控小车位置，查看系统历史数据。
+                                    <br>
+                                    平台提供的智能数据分析功能可以向园区管理人员提供直观、有效的分析结果。
+                                </p>
+                        
                             </div>
+                        
+                            
+                        
                         </div>
                     </div>
-
                 </div>
             </section>
 
             <hr>
 
-            <!-- 招商板块 -->
-            <section id="about" class="section about mt-5 mb-5 py-3 wow fadeIn" data-wow-delay="0.2s">
+            <!-- 项目优势 -->
+            <section id="features"  class="section  about mt-3 mb-5 py-3" >
 
-                <div class="row pt-2 mt-lg-5">
-
-                    <div class="col-lg-6 col-md-12 mb-3 wow fadeIn" data-wow-delay="0.4s">
-                        <!-- TODO: 这里要换一下自己的项目图片 -->
-                        <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/macbook.png" class="img-fluid rounded" alt="My photo">
+                <h2 class="title font-weight-bold text-center my-5 wow fadeIn" data-wow-delay="0.2s">
+                    <strong>我们的优势</strong>
+                </h2>
+            
+                <div class="row pt-3 mb-5 wow fadeIn" data-wow-delay="0.4s">
+            
+                  <div class="col-lg-5 text-center text-lg-left">
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/screens-section.jpg" alt="Sample image">
+                  </div>
+                  <div class="col-lg-7">
+            
+                    <div class="row mb-3">
+            
+                      <div class="col-1">
+                        <i class="fas fa-rocket fa-lg indigo-text"></i>
+                      </div>
+                      <div class="col-xl-10 col-md-11 col-10">
+                        <h5 class="font-weight-bold mb-3">便捷高效</h5>
+                        <p class="grey-text">我们的飞毛腿可以快速地为你送达你想要的物品，免去了您工作时间被占用的烦恼，极大地提高了您在园区内的工作效率。</p>
+                      </div>
+            
+                    </div>
+                    <div class="row mb-3">
+            
+                      <div class="col-1">
+                        <i class="fas fa-user-shield fa-lg indigo-text"></i>
+                      </div>
+                      <div class="col-xl-10 col-md-11 col-10">
+                        <h5 class="font-weight-bold mb-3">安全与隐私</h5>
+                        <p class="grey-text">我们确保您的物品受到妥善的保管，绝不会出现暴力递送的情况。同时我们充分保护您的隐私，安全独立地为每位客户送到物品是我们一直追求的目标。</p>
+                      </div>
+            
                     </div>
 
-                    <div class="col-lg-6 ml-auto col-md-12 wow fadeIn" data-wow-delay="0.4s">
-
-                        <h2 class="mb-5 title font-weight-bold wow fadeIn" data-wow-delay="0.2s">
-                            <strong>寻求合作伙伴</strong>
-                        </h2>
-
-                        <!-- <p align="justify" class="grey-text">我们正在寻找
-                            团队提供一套完整的无人车即时配送系统，针对不同的园区，我们提供定制的解决方案，</p> -->
-                        <p class="grey-text">
-                            <i class="fas fa-long-arrow-alt-right orange-text mr-2" aria-hidden="true"></i> 完整的无人车即时配送系统</p>
-                        <p class="grey-text">
-                            <i class="fas fa-long-arrow-alt-right orange-text mr-2" aria-hidden="true"></i> 高效的数据监管平台</p>
-                        <p class="grey-text">
-                            <i class="fas fa-long-arrow-alt-right orange-text mr-2" aria-hidden="true"></i> 轻巧的用户平台</p>
-
-                        <p align="justify" class="grey-text"> “飞毛腿”团队期待与您合作，共同打造一个高效率的园区。</p>
+                    <div class="row">
+                      <div class="col-1">
+                        <i class="fas fa-hand-holding-usd fa-lg indigo-text"></i>
+                      </div>
+                      <div class="col-xl-10 col-md-11 col-10">
+                        <h5 class="font-weight-bold mb-3">快速盈利</h5>
+                        <p class="grey-text mb-0">我们的无人车配送系统不但可以提高您的园区的工作效率、提高园区内人员的生活幸福感，通过合理的配送费能够实现快速回本盈利。</p>
+                      </div>
+            
                     </div>
-
+            
+                  </div>
+            
                 </div>
-
+            
             </section>
             
+         
+        </div>
 
-            <hr>
+        <!-- 案例介绍-->
+        <div class="streak streak-photo streak-md" id="sigs">
+            <div class="flex-center view rgba-indigo-light">
+                <div class="container py-3">
+                    <section class="section feature-box" >
 
-            <!-- 项目实例 -->
-            <section id="about" class="section about mt-5 mb-5 py-3 wow fadeIn" data-wow-delay="0.2s">
+                        <h2 class="py-5 my-5 white-text font-weight-bold text-center wow fadeIn" data-wow-delay="0.2s">
+                            案例介绍</h2>
 
-               
-                <div class="row pt-5 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="row features-small mb-5  wow fadeIn" data-wow-delay="0.4s">
 
-                    <div class="col-md-6 col-lg-8 mb-5 text-left">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="row mb-5">
+                                    <div class="col-2">
+                                        <a type="button" class="btn-floating white btn-lg my-0">
+                                            <i class="fas fa-school blue-text" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-9 pl-5">
+                                        <h4 class="feature-title white-text font-weight-bold">清华大学深圳国际研究生院</h4>
+                                        <p class="white-text">我们在清华大学深圳国际研究生院展开了产品初期阶段的策划与实验，得到了同学们的大力支持。</p>
+                                    </div>
+                                </div>
 
-                        <h2 class="mb-5 title font-weight-bold wow fadeIn" data-wow-delay="0.2s">
-                            <strong>案例介绍</strong>
-                        </h2>
+                                <div class="row mb-5">
+                                    <div class="col-2">
+                                        <a type="button" class="btn-floating white btn-lg my-0">
+                                            <i class="fas fa-layer-group blue-text" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-9 pl-5">
+                                        <h4 class="feature-title white-text font-weight-bold">物品群发</h4>
+                                        <p class="white-text">校园内师生可以自由组成群组，通过我们的小车向群组内的成员寄送或者收取物品。</p>
+                                    </div>
+                                </div>
 
-                        <p align="justify" class="grey-text">我们在清华大学深圳国际研究生院展开了产品初期阶段的策划与实验</p>
-                        <p align="justify" class="grey-text">“飞毛腿”得到了深研院学生的大力支持</p>
-                        <!-- <p align="justify" class="grey-text">Magnam ad perferendis iusto sint tempora ea voluptatibus iure, animi excepturi modi aut possimus
-                            in hic molestias repellendus illo. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Nemo animi soluta ratione quisquam, dicta ab cupiditate iure eaque? Repellendus voluptatum, magni
-                            impedit delectus, beatae maxime temporibus maiores quibusdam.</p> -->
+                                <div class="row mb-5">
+                                    <div class="col-2">
+                                        <a type="button" class="btn-floating white btn-lg my-0">
+                                            <i class="fas fa-boxes blue-text" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-9 pl-5">
+                                        <h4 class="feature-title white-text font-weight-bold">物品分类</h4>
+                                        <p class="white-text">我们使用不同的寄存小柜，用来配送不同的物品种类，应对不同用户的配送需求</p>
+                                    </div>
+                                </div>
 
-                    </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <div class="row mb-5">
+                                    <div class="col-2">
+                                        <a type="button" class="btn-floating white btn-lg my-0">
+                                            <i class="fas fa-utensils blue-text" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-9 pl-5">
+                                        <h4 class="feature-title white-text font-weight-bold">食堂餐食配送</h4>
+                                        <p class="white-text">为大学城园区定制的食堂餐食配送，满足了同学的需求，同时减少了食堂的拥堵和用餐等待时间。</p>
+                                    </div>
+                                </div>
 
-                    <div class="col-md-6 col-lg-3 mt-md-4 mt-lg-0 ml-auto mb-5 text-center">
+                                <div class="row mb-5">
+                                    <div class="col-2">
+                                        <a type="button" class="btn-floating white btn-lg my-0">
+                                            <i class="fas fa-dolly-flatbed blue-text" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-9 pl-5">
+                                        <h4 class="feature-title white-text font-weight-bold">快递寄取</h4>
+                                        <p class="white-text">通过与快递公司的合作，我们的小车可以帮助大学城内任意位置的同学寄取快递，为同学们节省了不少时间。</p>
+                                    </div>
+                                </div>
 
-                        <!-- TODO: 换图 -->
-                        <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new1.png" class="img-fluid rounded z-depth-0" alt="My photo">
+                                <div class="row mb-5">
+                                    <div class="col-2">
+                                        <a type="button" class="btn-floating white btn-lg my-0">
+                                            <i class="fas fa-handshake blue-text" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-9 pl-5">
+                                        <h4 class="feature-title white-text font-weight-bold">拼单配送</h4>
+                                        <p class="white-text">拼单功能不仅提高了小车的运输效率，更通过分摊运费的方式吸引力更多同学使用。</p>
+                                    </div>
+                                </div>
 
-                    </div>
+                            </div>
 
+                        </div>
+
+                    </section>
                 </div>
+            </div>
+        </div>
 
-            </section>
-            <!-- Section: About 2 -->
 
-            <hr>
+        <div class="container">
+        
+            <!-- price plan -->
+            <!-- <section class="text-center my-5">
 
-            <!--Section: Pricing v.5-->
-            <section class="text-center my-5">
-
-                <!--Section heading-->
                 <h2 class="title font-weight-bold my-5 wow fadeIn" data-wow-delay="0.2s">
                     <strong>Our pricing plans</strong>
                 </h2>
 
-                <!--Section description-->
                 <p class="grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate
                     esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.</p>
 
-                <!--Grid row-->
                 <div class="row">
 
-                    <!--Grid column-->
                     <div class="col-lg-4 col-md-12 mb-5">
-                        <!--Card-->
                         <div class="pricing-card card">
-
-                            <!--Content-->
                             <div class="card-body">
                                 <h5 class="font-weight-bold mt-3">Basic</h5>
-                                <!--Price-->
                                 <div class="price pt-0">
                                     <h2 class="number orange-text mb-0">10</h2>
                                 </div>
-                                <!--Price-->
                                 <ul class="list-unstyled striped title darker-striped">
                                     <li>
                                         <p>
@@ -353,27 +594,19 @@
                                 <a class="btn pink-gradient btn-rounded mb-4"> Buy now</a>
                             </div>
                         </div>
-                        <!--Card-->
                     </div>
-                    <!--Grid column-->
 
-                    <!--Grid column-->
                     <div class="col-lg-4 col-md-12 mb-5">
 
-                        <!-- Card -->
                         <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(8).jpg');">
 
-                            <!-- Content -->
                             <div class="text-white text-center pricing-card d-flex align-items-center rgba-indigo-strong py-3 px-3 rounded">
 
-                                <!--Content-->
                                 <div class="card-body">
                                     <h5 class="font-weight-bold mt-2">Pro</h5>
-                                    <!--Price-->
                                     <div class="price pt-0">
                                         <h2 class="number mb-0">20</h2>
                                     </div>
-                                    <!--Price-->
                                     <ul class="list-unstyled striped">
                                         <li>
                                             <p>
@@ -397,23 +630,15 @@
 
                             </div>
                         </div>
-                        <!--Card-->
                     </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
                     <div class="col-lg-4 col-md-12 mb-5">
-                        <!--Card-->
                         <div class="pricing-card card">
 
-                            <!--Content-->
                             <div class="card-body">
                                 <h5 class="font-weight-bold mt-3">Enterprise</h5>
-                                <!--Price-->
                                 <div class="price pt-0">
                                     <h2 class="number orange-text mb-0">30</h2>
                                 </div>
-                                <!--Price-->
                                 <ul class="list-unstyled striped title darker-striped">
                                     <li>
                                         <p>
@@ -436,419 +661,185 @@
                             </div>
 
                         </div>
-                        <!--Card-->
                     </div>
-                    <!--Grid column-->
 
                 </div>
-                <!--Grid row-->
+
+            </section> -->
+
+            <section id="future" class="section about mt-2 mb-5 py-3" >
+                <h2 class="title font-weight-bold text-center my-5 wow fadeIn" data-wow-delay="0.2s">
+                    <strong>未来发展</strong>
+                </h2>
+
+                <div class="row wow fadeIn" data-wow-delay="0.4s">
+                    <div class="col-lg-8 mx-auto">
+              
+                      <ol class="timeline">
+                        <li class="timeline-element">
+                          <h5 class="font-weight-bold dark-grey-text mb-3">首个园区接入飞毛腿系统</h5>
+                          <p class="grey-text font-small"><time datetime="2021-01-01">2021-01-01</time></p>
+                          <p class="text-muted">大学城——飞毛腿系统首次在大型园区试运营。</p>
+                        </li>
+              
+                        <li class="timeline-element">
+                          <h5 class="font-weight-bold dark-grey-text mb-3">实现盈利</h5>
+                          <p class="grey-text font-small"><time datetime="2023-07-31">2023-07-31</time></p>
+                          <p class="text-muted">首个试运行园区实现盈利，飞毛腿系统稳定运行。</p>
+                        </li>
+              
+                        <li class="timeline-element">
+                          <h5 class="font-weight-bold dark-grey-text mb-3">占领市场</h5>
+                          <p class="grey-text font-small"><time datetime="2025-12-31">2025-12-31</time></p>
+                          <p class="text-muted">飞毛腿系统占领无人配送领域30%的市场。</p>
+                        </li>
+              
+                        <li class="timeline-element">
+                          <h5 class="font-weight-bold dark-grey-text mb-3">未来，超越想象</h5>
+                          <p class="grey-text font-small"><time datetime="2025-12-31">……</time></p>
+                        </li>
+                      </ol>
+              
+                    </div>
+                </div>
 
             </section>
-            <!--Section: Pricing v.5-->
+            
+            <hr>
 
-        </div>
+             <!-- 招商板块 -->
+            <section id="cooperation" class="section about mt-5 mb-5 py-3 " >
 
-        <!-- Streak -->
-        <div class="streak streak-photo streak-md" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/92.jpg');">
-            <div class="flex-center view rgba-indigo-light">
-                <div class="container py-3">
+                <div class="row pt-2 mt-lg-5">
+                    <div class="col-lg-6 ml-auto col-md-12 wow fadeIn" data-wow-delay="0.2s">
 
-                    <!--Section: Features v.4-->
-                    <section class="section feature-box wow fadeIn" data-wow-delay="0.2s">
+                        <h2 class="mb-5 title font-weight-bold">
+                            <strong>寻求合作伙伴</strong>
+                        </h2>
 
-                        <!--Section heading-->
-                        <h2 class="py-5 my-5 white-text font-weight-bold text-center wow fadeIn" data-wow-delay="0.2s">
-                            Why choose SAAS</h2>
+                        <p class="grey-text">
+                            <i class="fas fa-long-arrow-alt-right orange-text mr-2" aria-hidden="true"></i> 完整的无人车即时配送系统</p>
+                        <p class="grey-text">
+                            <i class="fas fa-long-arrow-alt-right orange-text mr-2" aria-hidden="true"></i> 高效的数据监管平台</p>
+                        <p class="grey-text">
+                            <i class="fas fa-long-arrow-alt-right orange-text mr-2" aria-hidden="true"></i> 轻巧的用户平台</p>
 
-                        <!--Grid row-->
-                        <div class="row features-small mb-5">
-
-                            <!--Grid column-->
-                            <div class="col-md-12 col-lg-6">
-
-                                <!--Grid row-->
-                                <div class="row mb-5">
-                                    <div class="col-2">
-                                        <a type="button" class="btn-floating white btn-lg my-0">
-                                            <i class="fas fa-tablet-alt blue-text" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col-9 pl-5">
-                                        <h4 class="feature-title white-text">Fully responsive</h4>
-                                        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores.</p>
-                                    </div>
-                                </div>
-                                <!--Grid row-->
-
-                                <!--Grid row-->
-                                <div class="row mb-5">
-                                    <div class="col-2">
-                                        <a type="button" class="btn-floating white btn-lg my-0">
-                                            <i class="fas fa-level-up-alt blue-text" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col-9 pl-5">
-                                        <h4 class="feature-title white-text">Frequent updates</h4>
-                                        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores.</p>
-                                    </div>
-                                </div>
-                                <!--Grid row-->
-
-                                <!--Grid row-->
-                                <div class="row mb-5">
-                                    <div class="col-2">
-                                        <a type="button" class="btn-floating white btn-lg my-0">
-                                            <i class="fas fa-phone blue-text" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col-9 pl-5">
-                                        <h4 class="feature-title white-text">Technical support</h4>
-                                        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--Grid row-->
-
-                            </div>
-                            <!--Grid column-->
-
-                            <!--Grid column-->
-                            <div class="col-md-12 col-lg-6">
-
-                                <!--Grid row-->
-                                <div class="row mb-5">
-                                    <div class="col-2">
-                                        <a type="button" class="btn-floating white btn-lg my-0">
-                                            <i class="far fa-object-group blue-text" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col-9 pl-5">
-                                        <h4 class="feature-title white-text">Editable layout</h4>
-                                        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--Grid row-->
-
-                                <!--Grid row-->
-                                <div class="row mb-5">
-                                    <div class="col-2">
-                                        <a type="button" class="btn-floating white btn-lg my-0">
-                                            <i class="fas fa-rocket blue-text" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col-9 pl-5">
-                                        <h4 class="feature-title white-text">Fast and powerful</h4>
-                                        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--Grid row-->
-
-                                <!--Grid row-->
-                                <div class="row mb-5">
-                                    <div class="col-2">
-                                        <a type="button" class="btn-floating white btn-lg my-0">
-                                            <i class="fas fa-cloud-upload-alt blue-text" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col-9 pl-5">
-                                        <h4 class="feature-title white-text">Cloud storage</h4>
-                                        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--Grid row-->
-
-                            </div>
-                            <!--Grid column-->
-
-                        </div>
-                        <!--Grid row-->
-
-                    </section>
-                    <!--/Section: Features v.4-->
-                </div>
-            </div>
-        </div>
-        <!--/Streak-->
-
-        <!--Second container-->
-        <div class="container-fluid" style="background-color: #f4f4fa">
-            <div class="container py-4">
-
-                <!--Section: Services-->
-                <section class="section mt-3 mb-3 pb-3">
-
-                    <!-- Section heading -->
-                    <h3 class="text-center title my-5 pt-4 pb-5 dark-grey-text font-weight-bold wow fadeIn" data-wow-delay="0.2s">
-                        <strong>Easy to get started</strong>
-                    </h3>
-
-                    <!-- First row -->
-                    <div class="row wow fadeIn" data-wow-delay="0.4s">
-
-                        <!-- First column -->
-                        <div class="col-md-4 mb-5 text-center">
-
-                            <!--Panel-->
-                            <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-weight-bold dark-grey-text text-uppercase spacing mt-4 mx-4">
-                                    <i class="fas fa-square orange-text mr-2" aria-hidden="true"></i>
-                                    <strong>01 Create Account</strong>
-                                </p>
-                                <p class="grey-text font-small mx-4">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente earu
-                                    proident.
-                                </p>
-                            </div>
-                            <!--/.Panel-->
-
-                        </div>
-                        <!-- /First column -->
-
-                        <!-- Second column -->
-                        <div class="col-md-4 mb-5 text-center">
-
-                            <!--Panel-->
-                            <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-weight-bold dark-grey-text text-uppercase spacing mt-4 mx-4">
-                                    <i class="fas fa-square orange-text mr-2" aria-hidden="true"></i>
-                                    <strong>02 Select Plan</strong>
-                                </p>
-                                <p class="grey-text font-small mx-4">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente earu
-                                    proident.
-                                </p>
-                            </div>
-                            <!--/.Panel-->
-
-                        </div>
-                        <!-- /.Second column -->
-
-                        <!-- Third column -->
-                        <div class="col-md-4 mb-5 text-center">
-
-                            <!--Panel-->
-                            <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-weight-bold dark-grey-text text-uppercase spacing mt-4 mx-4">
-                                    <i class="fas fa-square orange-text mr-2" aria-hidden="true"></i>
-                                    <strong>03 Assign tasks</strong>
-                                </p>
-                                <p class="grey-text font-small mx-4">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente earu
-                                    proident.
-                                </p>
-                            </div>
-                            <!--/.Panel-->
-
-                        </div>
-                        <!-- /.Third column -->
-
+                        <p align="justify" class="grey-text"> 飞毛腿团队期待与您合作，共同打造一个高效率的园区。</p>
                     </div>
-                    <!-- /.First row -->
 
-                </section>
-                <!--/Section: Services-->
-
-            </div>
-        </div>
-        <!--Second container-->
-
-        <div class="container">
-
-            <!-- Section: Team v.1 -->
-            <section class="section team-section text-center my-5" id="team">
-
-                <!-- Section heading -->
-                <h3 class="text-center title my-5 dark-grey-text font-weight-bold wow fadeIn" data-wow-delay="0.2s">
-                    <strong>True words from our customers</strong>
-                </h3>
-                <!-- Section description -->
-                <p class="grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate
-                    esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.
-                </p>
-
-                <div class="row mt-5 pt-5">
-
-                    <!--Grid column-->
-                    <div class="col-lg-4 col-md-12 mb-5">
-
-                        <!--Card-->
-                        <div class="card testimonial-card">
-
-                            <!--Background color-->
-                            <div class="card-up pink-gradient"></div>
-
-                            <!--Avatar-->
-                            <div class="avatar mx-auto white">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-responsive">
-                            </div>
-
-                            <div class="card-body">
-                                <!--Name-->
-                                <h4 class="mt-1">
-                                    <strong>John Doe</strong>
-                                </h4>
-                                <hr>
-                                <!--Quotation-->
-                                <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci.</p>
-                            </div>
-
-                        </div>
-                        <!--Card-->
-
+                    <div class="col-lg-6 col-md-12 mb-3 wow fadeIn" data-wow-delay="0.4s">
+                        <!-- TODO: 这里要换一下自己的项目图片 -->
+                        <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/macbook.png" class="img-fluid rounded" alt="My photo">
                     </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-4 col-md-12 mb-5">
-
-                        <!--Card-->
-                        <div class="card testimonial-card">
-
-                            <!--Background color-->
-                            <div class="card-up pink-gradient">
-                            </div>
-
-                            <!--Avatar-->
-                            <div class="avatar mx-auto white">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle img-responsive">
-                            </div>
-
-                            <div class="card-body">
-                                <!--Name-->
-                                <h4 class="mt-1">
-                                    <strong>Anna Aston</strong>
-                                </h4>
-                                <hr>
-                                <!--Quotation-->
-                                <p class="dark-grey-text">Neque cupiditate assumenda in maiores repudiandae mollitia architecto.</p>
-                            </div>
-
-                        </div>
-                        <!--Card-->
-
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-4 col-md-12 mb-5">
-
-                        <!--Card-->
-                        <div class="card testimonial-card">
-
-                            <!--Background color-->
-                            <div class="card-up  pink-gradient"></div>
-
-                            <!--Avatar-->
-                            <div class="avatar mx-auto white">
-                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-responsive">
-                            </div>
-
-                            <div class="card-body">
-                                <!--Name-->
-                                <h4 class="mt-1">
-                                    <strong>Maria Kate</strong>
-                                </h4>
-                                <hr>
-                                <!--Quotation-->
-                                <p class="dark-grey-text">Delectus impedit saepe officiis ab aliquam repellat, rem totam unde ducimus.</p>
-                            </div>
-
-                        </div>
-                        <!--Card-->
-
-                    </div>
-                    <!--Grid column-->
 
                 </div>
 
             </section>
-            <!-- Section: Team v.1 -->
 
         </div>
 
-        <!-- Streak -->
+        <!-- 使用情况 -->
         <div class="streak streak-photo streak-md" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg');">
             <div class="flex-center mask rgba-gradient">
                 <div class="container my-5">
 
-                    <!-- Section heading -->
                     <h3 class="text-center pb-3 white-text font-weight-bold wow fadeIn" data-wow-delay="0.2s">
-                        <strong>Download our mobile app</strong>
+                        <strong>相关数据</strong>
                     </h3>
-                    <h6 class="text-center white-text pb-4 font-weight-bold wow fadeIn" data-wow-delay="0.2s">Get 30 days trial</h6>
-                    <!--First row-->
-                    <div class="row flex-center">
+                    <!-- <h6 class="text-center white-text pb-4 font-weight-bold wow fadeIn" data-wow-delay="0.2s">Get 30 days trial</h6> -->
+           
+                    <div class="row flex-center white-text wow fadeIn" data-wow-delay="0.4s">
 
-                        <a class="btn btn-white btn-rounded btn-lg orange-text font-weight-bold ml-0 wow fadeIn" data-wow-delay="0.2s">
-                            <i class="fab fa-android pr-2" aria-hidden="true"></i> Play store</a>
-                        <a class="btn btn-white btn-rounded btn-lg orange-text font-weight-bold wow fadeIn" data-wow-delay="0.2s">
-                            <i class="fab fa-apple pr-2" aria-hidden="true"></i> App store</a>
+                        <div class="col-md-4 mb-4">
+                            <div class="row">
+                              <div class="col-6 pr-0">
+                                <h4 class="display-4 text-right mb-0 count-up" data-from="0" data-to="42" data-time="2000">1</h4>
+                              </div>
+                    
+                              <div class="col-6">
+                                <p class="text-uppercase font-weight-normal mb-1">园区</p>
+                                <p class="mb-0"><i class="fas fa-city fa-2x mb-0"></i></p>
+                              </div>
+                            </div>
+                          </div>
+                    
+                          <div class="col-md-4 mb-4">
+                            <div class="row">
+                              <div class="col-6 pr-0">
+                                <h4 class="display-4 text-right mb-0 count1" data-from="0" data-to="3500" data-time="2000">43,584</h4>
+                              </div>
+                    
+                              <div class="col-6">
+                                <p class="text-uppercase font-weight-normal mb-1">用户</p>
+                                <p class="mb-0"><i class="fas fa-user fa-2x mb-0"></i></p>
+                              </div>
+                            </div>
+                          </div>
+                    
+                          <div class="col-md-4 mb-4">
+                            <div class="row">
+                              <div class="col-6 pr-0">
+                                <h4 class="display-4 text-right"><span class="d-flex justify-content-end"><span class="count2" data-from="0" data-to="100" data-time="2000">98.6</span> %</span></h4>
+                              </div>
+                    
+                              <div class="col-6">
+                                <p class="text-uppercase font-weight-normal mb-1">满意度</p>
+                                <p class="mb-0"><i class="fas fa-smile fa-2x mb-0"></i></p>
+                              </div>
+                            </div>
+                          </div>
+                    
                     </div>
-                    <!--First row-->
 
                 </div>
             </div>
         </div>
-        <!-- Streak -->
 
-        <!-- Section: Contact v.2 -->
+        <!-- 联系我们 -->
         <div class="container">
             <section id="contact" class="section text-center my-5">
 
-                <!-- Section heading -->
                 <h3 class="text-center title my-5 dark-grey-text font-weight-bold wow fadeIn" data-wow-delay="0.2s">
-                    <strong>Contact us</strong>
+                    <strong>联系我们</strong>
                 </h3>
 
-                <!-- Section sescription -->
-                <p class="grey-text w-responsive mx-auto mb-5 wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate
-                    esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.
-                </p>
+                <p class="grey-text w-responsive mx-auto  wow fadeIn" data-wow-delay="0.2s">若您有意与我们合作，请您发送邮件给我们的业务人员，期待您的来信！</p>
+                <p class="grey-text w-responsive mx-auto mb-5 wow fadeIn" data-wow-delay="0.2s">若您需要技术支持，请致电24小时在线电话，您将得到工程师专业指导。</p>
 
                 <div class="row wow fadeIn" data-wow-delay="0.4s">
 
-                    <!-- Grid column -->
                     <div class="col-md-8 col-lg-9">
                         <form>
-                            <!-- Grid row -->
                             <div class="row">
-                                <!-- Grid column -->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
                                         <input type="text" id="form41" class="form-control">
-                                        <label for="form41" class="">Your name</label>
+                                        <label for="form41" class="">姓名</label>
                                     </div>
                                 </div>
 
-                                <!-- Grid column -->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
                                         <input type="text" id="form52" class="form-control">
-                                        <label for="form52" class="">Your email</label>
+                                        <label for="form52" class="">邮箱</label>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Grid row -->
 
-                            <!-- Grid row -->
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="md-form mb-0">
                                         <input type="text" id="form51" class="form-control">
-                                        <label for="form51" class="">Subject</label>
+                                        <label for="form51" class="">问题</label>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Grid row -->
-
-                            <!-- Grid row -->
                             <div class="row">
-                                <!-- Grid column -->
                                 <div class="col-md-12">
 
                                     <div class="md-form mb-0">
                                         <textarea type="text" id="form76" class="md-textarea form-control" rows="3"></textarea>
-                                        <label for="form76">Your message</label>
+                                        <label for="form76">问题描述</label>
                                     </div>
 
                                 </div>
@@ -857,7 +848,7 @@
                         </form>
 
                         <div class="text-center text-md-left mb-5 mt-4">
-                            <a class="btn btn-rounded btn-white font-weight-bold">Send</a>
+                            <a class="btn btn-rounded btn-white font-weight-bold">提交</a>
                         </div>
                     </div>
                     <!-- Grid column -->
@@ -867,147 +858,109 @@
                         <ul class="list-unstyled contact-icons float-md-right">
                             <li>
                                 <i class="fas fa-map-marker-alt fa-2x title"></i>
-                                <p>New York, NY 10012, USA</p>
+                                <p> 位置</p>
+                                <p class="text-black-50">中国，广东省，深圳市，丽水路2279</p>
                             </li>
 
                             <li>
                                 <i class="fas fa-phone fa-2x title"></i>
-                                <p>+ 01 234 567 89</p>
+                                <p>技术支持</p>
+                                <p class="text-black-50">+86 123 456 7890</p>
                             </li>
 
                             <li>
                                 <i class="fas fa-envelope fa-2x title"></i>
-                                <p>contact@gmail.com</p>
+                                <p>业务合作</p>
+                                <p class="text-black-50">scud.feimaotui@gmail.com</p>
                             </li>
                         </ul>
                     </div>
-                    <!-- Grid column -->
 
                 </div>
             </section>
-            <!-- Section: Contact v.2 -->
-
         </div>
 
     </main>
-    <!-- Main content -->
 
-    <!--Footer-->
     <footer class="page-footer text-center text-md-left unique-color-dark pt-0">
 
         <div style="background-color: #f95169;">
             <div class="container">
 
-                <!--Grid row-->
                 <div class="row py-4 d-flex align-items-center">
 
-                    <!--Grid column-->
                     <div class="col-md-6 col-lg-5 text-center text-md-left mb-md-0">
-                        <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
+                        <h6 class="mb-0 white-text">欢迎关注我们！</h6>
                     </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
                     <div class="col-md-6 col-lg-7 text-center text-md-right">
-                        <!--Facebook-->
                         <a class="p-2 m-2 fa-lg fb-ic ml-0">
-                            <i class="fab fa-facebook-f white-text mr-lg-4"> </i>
+                            <i class="fab fa-weibo white-text mr-lg-4"> </i>
                         </a>
-                        <!--Twitter-->
                         <a class="p-2 m-2 fa-lg tw-ic">
-                            <i class="fab fa-twitter white-text mr-lg-4"> </i>
+                            <i class="fab fa-weixin white-text mr-lg-4"> </i>
                         </a>
-                        <!--Google +-->
                         <a class="p-2 m-2 fa-lg gplus-ic">
-                            <i class="fab fa-google-plus-g white-text mr-lg-4"> </i>
+                            <i class="fas fa-sms white-text mr-lg-4"> </i>
                         </a>
-                        <!--Linkedin-->
-                        <a class="p-2 m-2 fa-lg li-ic">
-                            <i class="fab fa-linkedin-in white-text mr-lg-4"> </i>
-                        </a>
-                        <!--Instagram-->
-                        <a class="p-2 m-2 fa-lg ins-ic">
-                            <i class="fab fa-instagram white-text mr-lg-4"> </i>
-                        </a>
+                        
                     </div>
-                    <!--Grid column-->
 
                 </div>
-                <!--Grid row-->
             </div>
         </div>
 
-        <!--Footer Links-->
-        <div class="container mt-5 mb-4 text-center text-md-left">
+        <!-- <div class="container mt-5 mb-4 text-center text-md-left"> -->
+        <div class="container pt-5 mb-4 text-center text-md-left">
             <div class="row mt-3">
 
-                <!--First column-->
                 <div class="col-md-3 col-lg-4 col-xl-3 mb-5">
                     <h6 class="spacing font-weight-bold">
-                        <strong>Company name</strong>
+                        <strong>项目团队</strong>
                     </h6>
                     <hr class="pink accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit.</p>
+                    <p>飞毛腿团队由一群对未来怀揣梦想的年轻人组成。<br>我们渴望用飞毛腿为您送去更便利、更舒心的生活。</p>
                 </div>
-                <!--/.First column-->
-
-                <!--Second column-->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-5">
                     <h6 class="spacing font-weight-bold">
-                        <strong>Products</strong>
+                        <strong>专家支持</strong>
                     </h6>
                     <hr class="pink accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>
-                        <a href="#!">MDBootstrap</a>
+                        <a href="https://www.sigs.tsinghua.edu.cn/lx/main.htm" target="_blank">SIGS - 李秀教授</a>
                     </p>
                     <p>
-                        <a href="#!">MDWordPress</a>
+                        <a  href="https://www.sigs.tsinghua.edu.cn/cl/main.htm" target="_blank">SIGS - 曾龙老师</a>
                     </p>
-                    <p>
-                        <a href="#!">BrandFlow</a>
-                    </p>
-                    <p>
-                        <a href="#!">Bootstrap Angular</a>
-                    </p>
+                    
                 </div>
-                <!--/.Second column-->
 
-                <!--Third column-->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-5">
                     <h6 class="spacing font-weight-bold">
-                        <strong>Useful links</strong>
+                        <strong>相关链接</strong>
                     </h6>
                     <hr class="pink accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>
-                        <a href="#!">Your Account</a>
+                        <a href="#!">数据后台</a>
                     </p>
                     <p>
-                        <a href="#!">Become an Affiliate</a>
+                        <a href="#!">客户端下载</a>
                     </p>
                     <p>
-                        <a href="#!">Shipping Rates</a>
-                    </p>
-                    <p>
-                        <a href="#!">Help</a>
+                        <a href="#!">案例介绍</a>
                     </p>
                 </div>
-                <!--/.Third column-->
 
-                <!--Fourth column-->
                 <div class="col-md-4 col-lg-3 col-xl-3">
                     <h6 class="spacing font-weight-bold">
-                        <strong>Contact</strong>
+                        <strong>联系方式</strong>
                     </h6>
                     <hr class="pink accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>
-                        <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                        <i class="fas fa-home mr-3"></i> 中国，广东省，深圳市，丽水路</p>
                     <p>
-                        <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                        <i class="fas fa-envelope mr-3"></i> scud.feimaotui@gmail.com</p>
                     <p>
-                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                    <p>
-                        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        <i class="fas fa-phone mr-3"></i> + 86 123 456 7890</p>
                 </div>
                 <!--/.Fourth column-->
 
@@ -1018,7 +971,7 @@
         <!-- Copyright-->
         <div class="footer-copyright text-center py-3">
             <div class="container-fluid">
-                © 2019 Copyright: <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+                © 2020 Copyright 飞毛腿 | 你的实时跑腿小车 
             </div>
         </div>
         <!--/.Copyright -->
@@ -1041,7 +994,41 @@
         // Material Select Initialization
         $(document).ready(function () {
             $('.mdb-select').material_select();
+
+            // 锚点定位
+            $("#index-link").click(function() {
+                $("html, body").animate({
+                scrollTop: $("header").offset().top}, {duration: 700,easing: "swing"});
+                return false;
+            });
+            $("#introduce-link").click(function() {
+                $("html, body").animate({
+                scrollTop: $("#introduce").offset().top - 95 }, {duration: 700,easing: "swing"});
+                return false;
+            });
+            $("#features-link").click(function() {
+                $("html, body").animate({
+                scrollTop: $("#features").offset().top - 95 }, {duration: 700,easing: "swing"});
+                return false;
+            });
+            $("#sigs-link").click(function() {
+                $("html, body").animate({
+                scrollTop: $("#sigs").offset().top - 85 }, {duration: 700,easing: "swing"});
+                return false;
+            });
+            $("#future-link").click(function() {
+                $("html, body").animate({
+                scrollTop: $("#future").offset().top - 40 }, {duration: 700,easing: "swing"});
+                return false;
+            });
+            $("#cooperation-link").click(function() {
+                $("html, body").animate({
+                scrollTop: $("#cooperation").offset().top - 95 }, {duration: 700,easing: "swing"});
+                return false;
+            });
         });
+
+
     </script>
 
 </body>
