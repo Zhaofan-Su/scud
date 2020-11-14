@@ -1,0 +1,191 @@
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+@media (max-width: 740px) {
+
+    html,
+    body,
+    header,
+    .view {
+        height: 1000px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+
+    html,
+    body,
+    header,
+    .view {
+        height: 650px;
+    }
+}
+
+@media (max-width: 740px) {
+    .intro-3 {
+        height: 1000px;
+    }
+}
+
+/* 导航栏动画 */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.top-nav-collapse {
+    background-color: #1C2331;
+}
+
+/* 手机端导航栏上色 */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #1C2331;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+    }
+}
+
+
+body {
+    font-weight: 400;
+}
+
+h6 {
+    line-height: 1.7;
+}
+
+/* 首页背景图 */
+#header-intro {
+    /* background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg'); */
+    background-image: url('./images/scene.jpeg ');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 案例介绍背景图 */
+#sigs {
+    background-image: url('./images/sigs.jpg');
+}
+
+
+/* timeline样式 */
+.timeline {
+    position: relative;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    margin-left: -1px;
+    background-color: #50a1ff;
+}
+
+.timeline-element {
+    position: relative;
+    width: 50%;
+    padding: 1rem 0;
+    padding-right: 2.5rem;
+    text-align: right;
+}
+
+.timeline-element::before {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 1.35rem;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #50a1ff;
+    background-color: #fff;
+}
+
+.timeline-element:nth-child(even)::before {
+    right: auto;
+    left: -8px;
+}
+
+.timeline-element:nth-child(even) {
+    margin-left: 50%;
+    padding-left: 2.5rem;
+    padding-right: 0;
+    text-align: left;
+}
+
+@media (max-width: 767.98px) {
+    .timeline::before {
+        left: 8px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element {
+        width: 100%;
+        text-align: left;
+        padding-left: 2.5rem;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element::before {
+        top: 1.25rem;
+        left: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element:nth-child(even) {
+        margin-left: 0rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element {
+        width: 100%;
+        text-align: left;
+        padding-left: 2.5rem;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element:nth-child(even)::before {
+        left: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element::before {
+        top: 1.25rem;
+    }
+}
+
+
+/* 登录页面的样式 */
+#login-form {
+    /* 登录卡片半透明 */
+    /* background-color: rgba(126, 123, 215, 0.2); */
+    background-color: rgba(68, 106, 134, 0.3);
+
+}
+
+.md-form label {
+    color: #ffffff;
+}
