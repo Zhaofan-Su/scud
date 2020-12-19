@@ -6,7 +6,7 @@
       name="viewport"
       content="initial-scale=1.0, user-scalable=no, width=device-width"
     />
-    <title>飞毛腿 | 数据监控平台</title>
+    <title>伴你童行 | 交通大数据监测平台</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/animsition.css" />
@@ -49,39 +49,39 @@
         <div class="left">
           <div class="item waybill">
             <div class="itemTit">
-              <span class="border-yellow">今日运单统计</span>
+              <span class="border-yellow">当日交通危险行为统计</span>
             </div>
             <div class="itemCon itembg">
-              <div class="progress" progress="80%">
-                <h3 class="clearfix"><span>已完成</span><i>79单</i></h3>
+              <div class="progress" progress="46%">
+                <h3 class="clearfix"><span>闯红灯</span><i>89例</i></h3>
                 <div class="progressBar"><span></span></div>
               </div>
-              <div class="progress" progress="15%">
-                <h3 class="clearfix"><span>待完成</span><i>13单</i></h3>
+              <div class="progress" progress="38%">
+                <h3 class="clearfix"><span>不走斑马线</span><i>73例</i></h3>
                 <div class="progressBar"><span></span></div>
               </div>
-              <div class="progress" progress="5%">
-                <h3 class="clearfix"><span>滞留</span><i>5单</i></h3>
+              <div class="progress" progress="16%">
+                <h3 class="clearfix"><span>危险地段滞留</span><i>32例</i></h3>
                 <div class="progressBar"><span></span></div>
               </div>
             </div>
           </div>
-          <!--各阶段平均用时统计-->
+          <!--用户日均交通危险行为-->
           <div class="item">
             <div class="itemTit">
-              <span class="border-green">各阶段平均用时统计</span>
+              <span class="border-green">用户日均交通危险行为次数</span>
             </div>
             <div class="itemCon itembg">
               <ul class="listStyle">
                 <li class="clearfix">
-                  <span>下单——取物</span><span><strong>5</strong>分钟</span>
+                  <span>6-8岁</span><span><strong>0.7</strong>次</span>
                 </li>
                 <li class="clearfix">
-                  <span>送物品</span><span><strong>12.3</strong>分钟</span>
+                  <span>9-12岁</span><span><strong>1.3</strong>次</span>
                 </li>
-                <li class="clearfix">
+                <!-- <li class="clearfix">
                   <span>用户取物品</span><span><strong>1</strong>分钟</span>
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -93,8 +93,8 @@
             <div class="itemCon itembg">
               <ul class="listStyle">
                 <li class="clearfix">
-                  <span>教职工：<strong>102</strong>人</span>
-                  <span>学生：<strong>10538</strong>人</span>
+                  <span>6-8岁：<strong>196</strong>人</span>
+                  <span>9-12岁：<strong>363</strong>人</span>
                 </li>
               </ul>
               <div id="summaryPie2" style="height: 200px; width: 200px"></div>
@@ -113,7 +113,7 @@
                     ></a>
                     <form class="searchForm">
                       <button class="icoSearch"></button
-                      ><input type="text" name="" placeholder="搜索小车" />
+                      ><input type="text" name="" placeholder="搜索徽章" />
                     </form>
                   </div>
                 </div>
@@ -123,11 +123,11 @@
               </div>
               <div id="myMap" class="item"></div>
             </div>
-            <!--月运单量统计图-->
+            <!--上月DAU统计图-->
             <div class="billChart">
               <div class="itemTit">
                 <span class="border-blue">
-                  上月运单量统计图<small>(2020年10月)</small>
+                  上月DAU统计图<small>(2020年11月)</small>
                 </span>
               </div>
               <div id="myChart1"></div>
@@ -135,14 +135,15 @@
           </div>
         </div>
         <div class="right">
-          <!--总计运单数-->
+          <!--总计监测出行次数-->
           <div class="item total itembg">
             <div class="itemTit">
-              <span class="border-yellow">总计运单数</span>
+              <span class="border-yellow">总计监测出行次数</span>
             </div>
             <div class="itemCon">
               <div class="totalNum">
-                <strong id="totalNum" total="10681">0</strong><span>单</span>
+                <strong id="totalNum" total="10681">10681</strong
+                ><span>次</span>
               </div>
             </div>
           </div>
@@ -156,99 +157,96 @@
                 <ul class="clearfix">
                   <li class="color-yellow">
                     <span class="border-yellow" id="indicator1" total="9"
-                      >0</span
+                      >253</span
                     >
-                    <p>在线小车</p>
+                    <p>在线徽章</p>
                   </li>
                   <li class="color-green">
                     <span class="border-green" id="indicator2" total="3"
-                      >0</span
+                      >2</span
                     >
-                    <p>在线管理员</p>
+                    <p>在线交警</p>
                   </li>
                   <li class="color-red">
-                    <span class="border-red" id="indicator3" total="5">0</span>
-                    <p>故障次数</p>
+                    <span class="border-red" id="indicator3" total="5">4</span>
+                    <p>在线管理员</p>
                   </li>
                 </ul>
                 <div id="indicatorContainer"></div>
               </div>
             </div>
           </div>
-          <!--小车状态-->
+          <!--各街道交通违章次数统计-->
           <div class="item billState">
             <div class="itemTit">
-              <span class="border-green">小车状态</span>
+              <span class="border-green">各街道交通违章次数统计</span>
             </div>
             <div class="itemCon">
               <div class="StateBox">
                 <div class="StateTit">
-                  <span>小车编号</span><span>今日运行时间</span
-                  ><span>满载率</span>
+                  <span>街道名称</span>
+                  <span>用户违章次数</span>
+                  <span>违章多发点</span>
                 </div>
                 <div id="FontScroll">
                   <ul>
                     <li>
                       <div class="fontInner clearfix">
-                        <span>SIGS-0001</span><span>4小时53分</span
-                        ><span
-                          ><div class="progress" progress="88%">
+                        <span>桃园街道</span><span>46例</span><span>3处</span>
+                        <!-- <div class="progress" progress="88%">
                             <div class="progressBar"><span></span></div>
                             <h3>
                               <i><h4></h4></i>
-                            </h3></div
-                        ></span>
+                            </h3>
+                          </div> -->
                       </div>
                     </li>
                     <li>
                       <div class="fontInner clearfix">
-                        <span>SIGS-0002</span><span>4小时15分</span
-                        ><span
-                          ><div class="progress" progress="80%">
+                        <span>南山街道</span><span>23例</span><span>1处</span>
+                        <!-- <div class="progress" progress="80%">
                             <div class="progressBar"><span></span></div>
                             <h3>
                               <i><h4></h4></i>
-                            </h3></div
-                        ></span>
+                            </h3>
+                            </div> -->
                       </div>
                     </li>
                     <li>
                       <div class="fontInner clearfix">
-                        <span>SIGS-0003</span><span>3小时56分</span
-                        ><span
-                          ><div class="progress" progress="50%">
+                        <span>南头街道</span><span>31例</span>
+                        <span>2处</span>
+                        <!-- <div class="progress" progress="50%">
                             <div class="progressBar"><span></span></div>
                             <h3>
                               <i><h4></h4></i>
-                            </h3></div
-                        ></span>
+                            </h3>
+                          </div> -->
                       </div>
                     </li>
                     <li>
                       <div class="fontInner clearfix">
-                        <span>SIGS-0004</span><span>2小时05分</span
-                        ><span
-                          ><div class="progress" progress="30%">
+                        <span>西丽街道</span><span>35例</span><span>2处</span>
+                        <!-- <div class="progress" progress="30%">
                             <div class="progressBar"><span></span></div>
                             <h3>
                               <i><h4></h4></i>
-                            </h3></div
-                        ></span>
+                            </h3></div> -->
                       </div>
                     </li>
                     <li>
                       <div class="fontInner clearfix">
-                        <span>SIGS-0005</span><span>5小时03分</span
-                        ><span
-                          ><div class="progress" progress="96%">
-                            <div class="progressBar"><span></span></div>
-                            <h3>
-                              <i><h4></h4></i>
-                            </h3></div
-                        ></span>
+                        <span>沙河街道</span><span>19例</span>
+                        <span>1处</span>
+                        <!-- <div class="progress" progress="96%">
+                          <div class="progressBar"><span></span></div>
+                          <h3>
+                            <i><h4></h4></i>
+                          </h3>
+                        </div> -->
                       </div>
                     </li>
-                    <li>
+                    <!-- <li>
                       <div class="fontInner clearfix">
                         <span>SIGS-0006</span><span>4小时30分</span
                         ><span
@@ -259,8 +257,8 @@
                             </h3></div
                         ></span>
                       </div>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                       <div class="fontInner clearfix">
                         <span>SIGS-0007</span><span>3小时57分</span
                         ><span
@@ -271,8 +269,8 @@
                             </h3></div
                         ></span>
                       </div>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                       <div class="fontInner clearfix">
                         <span>SIGS-0008</span><span>4小时23分</span
                         ><span
@@ -283,8 +281,8 @@
                             </h3></div
                         ></span>
                       </div>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                       <div class="fontInner clearfix">
                         <span>SIGS-0009</span><span>2小时05分</span
                         ><span
@@ -294,7 +292,7 @@
                               <i><h4></h4></i>
                             </h3></div
                         ></span>
-                      </div>
+                      </div> -->
                     </li>
                   </ul>
                 </div>

@@ -65,26 +65,26 @@ $(function () {
         resizeEnable: true,
         zoom: 17,
         mapStyle: "amap://styles/blue",
-        center: [113.969232, 22.59172],
+        center: [113.963505, 22.587379],
     });
     var n = [
-        [113.967832, 22.592314],
-        [113.9695, 22.592829],
-        [113.970493, 22.59062],
-        [113.969484, 22.591388],
-        [113.967826, 22.590665],
-        [113.967446, 22.592473],
-        [113.967285, 22.592007],
-        [113.970959, 22.592161]
+        [113.963988, 22.586715],
+        [113.964251, 22.586894],
+        [113.963441, 22.586705],
+        [113.963231, 22.587072],
+        [113.964283, 22.586443],
+        [113.964712, 22.586725],
+        [113.964750, 22.586636],
+        [113.964406, 22.585858]
     ];
     var f;
     for (var d = 0; d < n.length; d += 1) {
         var g = new AMap.Marker({
             position: n[d],
             map: k,
-            icon: "images/s_ico4.png",
+            icon: "images/favicon.png",
         });
-        g.content = "<p>SIGS-001</p><p>当前位置：信息楼</p><p>待处理任务：10</p><p>满载率：95%</p><p>已使用时间：2小时15分</p>";
+        g.content = "<p>徽章-NS-0128</p><p>当前位置：平山小学</p>";
         g.on("click", h)
     }
     var e = new AMap.InfoWindow({
@@ -103,7 +103,7 @@ $(function () {
         tooltip: {
             trigger: "item",
             formatter: function (i) {
-                var z = "上月" + i.name + "号运单数：" + i.data;
+                var z = "上月" + i.name + "小孩子违规次数：" + i.data;
                 return z
             }
         },
@@ -230,7 +230,7 @@ $(function () {
         title: {
             x: "center",
             y: "center",
-            text: "用户满意度",
+            text: "遵守交规情况",
             textStyle: {
                 fontWeight: "normal",
                 color: "#32ffc7",
