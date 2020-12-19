@@ -115,24 +115,11 @@ body {
 
 #top .topTitle {
     padding-top: 18px;
-    font-size: 24px;
+    font-size: 22px;
     color: #fff;
 }
 
-#top .pageTit a {
-    display: block;
-    width: 50%;
-    height: 44px;
-    background: url(../images/titBg.png);
-    background-size: 100% 100%;
-    line-height: 44px;
-    text-align: center;
-    font-size: 18px;
-    color: #00deff;
-    position: absolute;
-    top: 50%;
-    margin-top: -22px;
-}
+
 
 #top .topLogo {
     height: 100%;
